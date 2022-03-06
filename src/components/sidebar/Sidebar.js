@@ -7,7 +7,6 @@ import sidebar_items from "../../assets/JsonData/sidebar_routes"
 import {Link} from 'react-router-dom'
 import * as Icons from "react-icons/ai"
 // import * as Icons from "react-icons/bi"
-import "boxicons/css/boxicons.min.css"
 
 const SideBarItem = props => {
     const active = props.active ? "active" : ""
