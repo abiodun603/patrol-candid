@@ -3,6 +3,7 @@ import React, {useState, useEffect, useContext} from 'react'
 import { useForm } from '../../hooks/useForm';
 import {LoginBanner, LoginForm, LoginWrapper,FormWrapper, FromBx, Input, FromBxRem, InputCheck, Button} from './Login__element'
 import axios from "axios"
+import {GrShieldSecurity} from "react-icons/gr"
 
 // import {AuthContext} from "../../App"
 
@@ -35,13 +36,28 @@ const Signin = () => {
                     <img src="https://mir-s3-cdn-cf.behance.net/project_modules/1400/4b55bc102925351.5f41b2583a8db.png" alt="name"/>
                 </LoginBanner>
                 <FormWrapper onSubmit = {handleLogin}>
+                    <div
+                        className='header'
+                    >
+                        <GrShieldSecurity style={{fontSize: 20, color: "#263253"}}/>
+                        <h2>Candid Security</h2>
+
+                    </div>
+
                     <LoginForm>
-                        <h2>Candid Login</h2>
+
+                        <div >
+                            {/* welcome back */}
+                            <h3>Welcome back!</h3>
+
+                            {/* discription */}
+                            <p>Sign in to continue to dashboard</p>
+                        </div>
                         <FromBx>
-                            <span>Email</span>
+                            <span>Email Address</span>
                             <Input 
                                 type = "text" 
-                                placeholder = "Enter Email Address"
+                                placeholder = "Enter email address"
                                 name = "email"
                                 value = {values.email}
                                 onChange = {handleChange}
@@ -53,7 +69,7 @@ const Signin = () => {
                             <Input 
                                 name= "password"
                                 type = "text" 
-                                placeholder = "*****" 
+                                placeholder = "Enter password" 
                                 value = {values.password}
                                 onChange = {handleChange}    
                             />
@@ -67,10 +83,30 @@ const Signin = () => {
                             <Button type="submit">
                                 {isFetching ? (
                                     "mnmnmn"
-                                ): "Login"}
+                                ): "Sign In"}
                             </Button>
                         </FromBx>
                     </LoginForm>
+
+                    <div
+                        style={{
+                            display: "flex",
+                            justifyContent: "center",
+                            alignItems: "center",
+                            textAlign: "center",
+                            width: "100%",
+                            marginBottom: "30"
+                        }}
+                    >
+                        <p
+                            style={{
+                                textAlign: "center",
+                                fontWeight: 500
+                            }}
+                        >
+                            &copy; CANDID Security
+                        </p>
+                    </div>
                 </FormWrapper>
             </LoginWrapper>
         </>

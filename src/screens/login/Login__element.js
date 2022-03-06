@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const LoginWrapper = styled.div `
     position: relative;
     width: 100%;
-    height: 100vh;
+    height: 90vh;
     display: flex;
 `
 
@@ -33,11 +33,29 @@ export const LoginBanner = styled.div `
 
 export const FormWrapper = styled.form `
     display: flex;
-    justify-content: center;
-    align-items: center;
+    justify-content: flex-start;
+    align-items: flex-start;
     flex-direction: column; 
     width: 50%;
     height: 100%;
+
+    .header{
+        padding-left: 1rem;
+        margin-top: 2rem;
+        margin-bottom: var(--mb-2);
+        display: flex;
+        align-items: center;
+
+        h2{
+            text-align: left !important;
+            font-size: 18px;
+            font-weight: 500;
+            margin-left: 5px;
+            color: var(--kBlack);
+        }
+    }
+
+    
 
     @media screen and (max-width: 768px){
         width: 100%;
@@ -47,7 +65,7 @@ export const FormWrapper = styled.form `
 
 export const FormWrapper2 = styled.form `
     display: flex;
-    justify-content: center;
+    // justify-content: center;
     // align-items: center;
     flex-direction: column; 
 
@@ -69,29 +87,44 @@ export const FormWrapper2 = styled.form `
 
 export const LoginForm = styled.div `
 	width:65%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
 
 	h2{
 		text-align: left !important;
 		margin-bottom: var(--mb-2);
-		&:after{
-			content: "";
-			display: block;
-			width: 75px;
-			height: 5px;
-			background: var(--kBlue);
-			margin-top: 5px;
-		}
+        font-size: 18px;
+		// &:after{
+		// 	content: "";
+		// 	display: block;
+		// 	width: 75px;
+		// 	height: 5px;
+		// 	background: var(--kBlue);
+		// 	margin-top: 5px;
+		// }
 	}
+
+    h3{
+        font-size: 18px;
+        color: var(--kBlue);
+    }
+
+    p{
+        font-size: 15px;
+        margin-bottom: 1.5rem;
+    }
 
 	@media screen and (max-width: 768px){
 		width: 100%;
-		padding: 0 2rem
+		padding: 0 1rem
 	}
 `
 
 export const FromBx = styled.div `
     width: 100%;
-    margin-bottom: .5rem;
+    margin-bottom: .8rem;
     display: flex;
     flex-direction: column;
 
@@ -167,18 +200,18 @@ export const InputCheck = styled.input.attrs(props => ({
 }))` `
 
 export const FromBxRem = styled.div `
-    margin-top: .5rem;
+    margin-top: 1.5rem;
 `
 export const Button = styled.button `
     width: 100%;
     border: none;
-    padding: 15px 20px;
+    padding: 14px 20px;
     color: var(--kWhite);
     cursor: pointer;
-    border-radius: 10px; 
+    border-radius: 4px; 
     background: var(--kBlue);
     letter-spacing: 1px;
-    text-transform: uppercase;
+    // text-transform: uppercase;
     font-weight: 600;
-    margin-top: 1.5rem;
+    margin-top: 2.5rem;
 `

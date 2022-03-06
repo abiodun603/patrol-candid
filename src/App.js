@@ -16,13 +16,13 @@ function App() {
       {/* New AuthProvidr */}
       <Router>
         <Switch>
-          {/* <Route exact path="/">{ user? <Layout/> : <Redirect to="/login" />}</Route>
-          <Route path = "/login">
+         <Route exact path="/">{ user? <Patrol/> : <Redirect to="/login" />}</Route>
+           <Route path = "/login">
             {!user ? <Signin/> : <Redirect to="/" />}
-          </Route> */}
-          <Route exact element = "/patrol">
-            <Patrol/>
           </Route>
+          {/* <Route exact element = "/patrol">
+            <Patrol/>
+          </Route> */}
         </Switch>
       </Router>
       
