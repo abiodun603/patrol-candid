@@ -3,6 +3,8 @@ import axios from "axios"
 import Signin from "./screens/login/Login"
 import Layout from "./components/c-layout/Layout"
 import Patrol from "./screens/patrol/Patrol"
+import Guards from "./screens/patrol/Guards"
+
 import "./assets/css/grid.css"
 import {BrowserRouter as Router, Route, Switch, Redirect} from 'react-router-dom'
 import {AuthContext} from "./context/authContext/AuthContext"
@@ -20,9 +22,9 @@ function App() {
            <Route path = "/login">
             {!user ? <Signin/> : <Redirect to="/" />}
           </Route>
-          {/* <Route exact element = "/patrol">
-            <Patrol/>
-          </Route> */}
+          <Route exact element = "/guards-form">
+            <Guards/>
+          </Route>
         </Switch>
       </Router>
       
